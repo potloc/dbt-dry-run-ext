@@ -23,6 +23,10 @@ class dbt_dry_run(ExtensionBase):
         """Initialize the extension."""
         self.dbt_dry_run_bin = "dbt-dry-run"  # verify this is the correct name
         self.dbt_dry_run_invoker = Invoker(self.dbt_dry_run_bin)
+        self.dbt_project_dir = Path(os.getenv("DBT_PROJECT_DIR", "transform"))
+        self.dbt_profiles_dir = Path(
+            os.getenv("DBT_PROFILES_DIR", self.dbt_project_dir / "profiles")
+        )
 
     def invoke(self, command_name: str | None, *command_args: Any) -> None:
         """Invoke the underlying cli, that is being wrapped by this extension.
@@ -32,6 +36,12 @@ class dbt_dry_run(ExtensionBase):
             command_args: The arguments to pass to the command.
         """
         try:
+            if self.dbt_project_dir is not None:
+                command_args = command_args + ("--project-dir=" + str(self.dbt_project_dir),)
+                log.info(f"Using project-dir at `{self.dbt_project_dir}`...")
+            if self.dbt_profiles_dir != "":
+                command_args = command_args + ("--profiles-dir=" + str(self.dbt_profiles_dir),)
+                log.info(f"Using profile.yml at `{self.dbt_profiles_dir}`...")
             self.dbt_dry_run_invoker.run_and_log(command_name, *command_args)
         except subprocess.CalledProcessError as err:
             log_subprocess_error(
