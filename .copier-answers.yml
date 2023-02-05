@@ -1,0 +1,12 @@
+# Changes here will be overwritten by Copier
+_commit: v0.1.0
+_src_path: gh:meltano/edk
+admin_name: Stephane Burwash
+cli_prefix: dbt_dry_run
+extension_description: A meltano utility extension for dbt_dry_run that wraps the
+    `dbt-dry-run` command.
+extension_id: dbt_dry_run-ext
+extension_name: dbt_dry_run
+extension_name_lower: dbt_dry_run
+library_name: dbt_dry_run_ext
+wrapper_target_name: dbt-dry-run
