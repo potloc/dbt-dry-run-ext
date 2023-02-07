@@ -2,6 +2,13 @@
 
 dbt_dry_run is A meltano utility extension for dbt_dry_run that wraps the `dbt-dry-run` command.
 
+It is based on a [plugin](https://github.com/autotraderuk/dbt-dry-run) made by the awesome team at AutotraderUK - please support the original creators.
+
+## Plugin specifics
+1) As the dry-run functionality is only offered by Bigquery (at the moment), this plugin is **exclusively** for `dbt-bigquery` use.
+2) This plugin **requires** that you run `dbt-bigquery compile` before executing; it relies on a fresh compilation. We will be working on an update to make this step automated in the future.
+
+
 ## Installing this extension for local development
 
 1. Install the project dependencies with `poetry install`:
