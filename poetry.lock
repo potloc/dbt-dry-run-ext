@@ -202,11 +202,11 @@ werkzeug = ">=1,<3"
 
 [[package]]
 name = "dbt-dry-run"
-version = "0.6.4"
+version = "0.6.8"
 description = "Dry run dbt projects"
 category = "main"
 optional = false
-python-versions = ">=3.8,<3.10"
+python-versions = ">=3.8,<3.12"
 
 [package.dependencies]
 agate = ">=1.6,<2.0"
@@ -214,7 +214,7 @@ google-cloud-bigquery = ">=3,<4"
 networkx = ">=2.6,<3.0"
 pydantic = ">=1.9.0,<2.0.0"
 pyyaml = ">=6,<7"
-tenacity = ">=8.0.1,<9.0.0"
+tenacity = ">=8.2,<9.0"
 typer = ">=0.6.1,<0.7.0"
 
 [[package]]
@@ -639,7 +639,7 @@ python-versions = "*"
 
 [[package]]
 name = "meltano-edk"
-version = "0.1.0"
+version = "0.0.0"
 description = "A framework for building Meltano extensions"
 category = "main"
 optional = false
@@ -650,16 +650,16 @@ develop = false
 devtools = ">=0.9.0,<1"
 pydantic = ">=1.9.0,<2"
 PyYAML = "^6.0.0"
-structlog = "^21"
+structlog = ">=21,<24"
 
 [package.extras]
-docs = ["myst-parser (>=0.17.2,<0.19.0)", "sphinx (>=4.5,<6.0)", "sphinx-autobuild (>=2021.3.14,<2022.0.0)", "sphinx-copybutton (>=0.3.1,<0.6.0)", "sphinx-rtd-theme (>=0.5.2,<1.2.0)"]
+docs = ["furo (>=2022.12.7,<2024.0.0)", "myst-parser (>=0.17.2,<1.1.0)", "sphinx (>=4.5,<6.0)", "sphinx-autobuild (>=2021.3.14,<2022.0.0)", "sphinx-copybutton (>=0.3.1,<0.6.0)"]
 
 [package.source]
 type = "git"
 url = "https://github.com/meltano/edk.git"
 reference = "main"
-resolved_reference = "47a359acdc49518991f54131abf73439cfe9f5aa"
+resolved_reference = "29fdb7eede5c2c40e911e0000f5f066c7bdc6cda"
 
 [[package]]
 name = "minimal-snowplow-tracker"
@@ -983,7 +983,7 @@ tests = ["coverage[toml]", "freezegun (>=0.2.8)", "pretend", "pytest (>=6.0)", "
 
 [[package]]
 name = "tenacity"
-version = "8.1.0"
+version = "8.2.2"
 description = "Retry code until it succeeds"
 category = "main"
 optional = false
@@ -1280,8 +1280,8 @@ dbt-core = [
     {file = "dbt_core-1.4.1-py3-none-any.whl", hash = "sha256:40fbc42484accb75bb59dd8cabb018da4f3a022f08cfa4f490a0c8759b25a9d9"},
 ]
 dbt-dry-run = [
-    {file = "dbt_dry_run-0.6.4-py3-none-any.whl", hash = "sha256:0a0c3a1412ff8af523cd93f69e6c17a38b92c8f22278579e63712175cb678c0c"},
-    {file = "dbt_dry_run-0.6.4.tar.gz", hash = "sha256:4d9c0a148210b8263ebb0f9d1fb88628f2c93f255f3342978b7e44987e8d00e5"},
+    {file = "dbt_dry_run-0.6.8-py3-none-any.whl", hash = "sha256:ed4a7ed84a8becd219787ffcdc8fb1d2504a9253850e83da8590efb9f145f2d2"},
+    {file = "dbt_dry_run-0.6.8.tar.gz", hash = "sha256:4a82aa7e0d375ed356ad800e4903f24076c177f949776e27333b76c61f230184"},
 ]
 dbt-extractor = [
     {file = "dbt_extractor-0.4.1-cp36-abi3-macosx_10_7_x86_64.whl", hash = "sha256:4dc715bd740e418d8dc1dd418fea508e79208a24cf5ab110b0092a3cbe96bf71"},
@@ -1946,8 +1946,8 @@ structlog = [
     {file = "structlog-21.5.0.tar.gz", hash = "sha256:68c4c29c003714fe86834f347cb107452847ba52414390a7ee583472bde00fc9"},
 ]
 tenacity = [
-    {file = "tenacity-8.1.0-py3-none-any.whl", hash = "sha256:35525cd47f82830069f0d6b73f7eb83bc5b73ee2fff0437952cedf98b27653ac"},
-    {file = "tenacity-8.1.0.tar.gz", hash = "sha256:e48c437fdf9340f5666b92cd7990e96bc5fc955e1298baf4a907e3972067a445"},
+    {file = "tenacity-8.2.2-py3-none-any.whl", hash = "sha256:2f277afb21b851637e8f52e6a613ff08734c347dc19ade928e519d7d2d8569b0"},
+    {file = "tenacity-8.2.2.tar.gz", hash = "sha256:43af037822bd0029025877f3b2d97cc4d7bb0c2991000a3d59d71517c5c969e0"},
 ]
 text-unidecode = [
     {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
