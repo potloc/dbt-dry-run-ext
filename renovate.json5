@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "matchManagers": ["docker-compose", "dockerfile"],
+      "addLabels": ["docker"]
+    },
+    {
+      "matchManagers": ["github-actions", "terraform"],
+      "addLabels": ["infra"]
+    },
+    {
+      "matchManagers": [
+        "docker-compose",
+        "dockerfile",
+        "github-actions",
+        "terraform"
+      ],
+      "assigneesFromCodeOwners": true,
+      "reviewersFromCodeOwners": true
+    }
+  ]
+}
