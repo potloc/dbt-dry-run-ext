@@ -183,7 +183,7 @@ urllib3 = ">=1.0,<2.0"
 
 [[package]]
 name = "dbt-dry-run"
-version = "0.6.8"
+version = "0.7.0"
 description = "Dry run dbt projects"
 category = "main"
 optional = false
@@ -632,7 +632,7 @@ docs = ["furo (>=2022.12.7,<2024.0.0)", "myst-parser (>=0.17.2,<1.1.0)", "sphinx
 type = "git"
 url = "https://github.com/meltano/edk.git"
 reference = "main"
-resolved_reference = "f794a7c50d35437ea047e06462ffeaf6610d4c6f"
+resolved_reference = "cd9ee301ba807cef9518ef397d71f6757e1f5b95"
 
 [[package]]
 name = "minimal-snowplow-tracker"
@@ -1026,7 +1026,7 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "1.1"
 python-versions = "<3.10,>=3.8"
-content-hash = "bd0676a2faa702fd7ea52842cf1937bae226c610af282473a3dcdc34527ed922"
+content-hash = "cb138d64a6b2d7220ebdf5b69bd95f549233cfb5deb7ea8cfd821bd645490311"
 
 [metadata.files]
 agate = [
@@ -1240,8 +1240,8 @@ dbt-core = [
     {file = "dbt_core-1.6.1-py3-none-any.whl", hash = "sha256:e21364d6d4ba7010616b1e14832ca1078b880cb565ba8fe7d68ffef33d628e34"},
 ]
 dbt-dry-run = [
-    {file = "dbt_dry_run-0.6.8-py3-none-any.whl", hash = "sha256:ed4a7ed84a8becd219787ffcdc8fb1d2504a9253850e83da8590efb9f145f2d2"},
-    {file = "dbt_dry_run-0.6.8.tar.gz", hash = "sha256:4a82aa7e0d375ed356ad800e4903f24076c177f949776e27333b76c61f230184"},
+    {file = "dbt_dry_run-0.7.0-py3-none-any.whl", hash = "sha256:b046c8bd400cec430f0306248a16a39044b07ecadb1cfef5eee111a028363921"},
+    {file = "dbt_dry_run-0.7.0.tar.gz", hash = "sha256:cd6f8abfec7d3e46fc5ff3bca155366aa3c202a319b8dddba63207c0c29feb99"},
 ]
 dbt-extractor = [
     {file = "dbt_extractor-0.4.1-cp36-abi3-macosx_10_7_x86_64.whl", hash = "sha256:4dc715bd740e418d8dc1dd418fea508e79208a24cf5ab110b0092a3cbe96bf71"},
