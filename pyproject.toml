@@ -25,7 +25,7 @@ dbt-dry-run = "^0.7.0"
 dbt-bigquery = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
-black = "^22.3.0"
+black = "^23.0.0"
 isort = "^5.10.1"
 flake8 = "^3.9.0"
 
