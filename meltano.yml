@@ -1,0 +1,24 @@
+version: 1
+send_anonymous_usage_stats: true
+project_id: dbt-dry-run-ext
+default_environment: test
+environments:
+  - name: test
+plugins:
+  utilities:
+      - name: dbt-dry-run
+        namespace: dbt-dry-run
+        pip_url: -e .
+        executable: dbt_dry_run_invoker
+        settings:
+          - name: project-dir
+            env: DBT_PROJECT_DIR
+            kind: string
+            value: ${MELTANO_PROJECT_ROOT}/transform/
+          - name: profiles-dir
+            env: DBT_PROFILES_DIR
+            kind: string
+            value: ${MELTANO_PROJECT_ROOT}/transform/profiles/bigquery/
+          - name: target
+            kind: string
+            value: $MELTANO_ENVIRONMENT
