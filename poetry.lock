@@ -1132,8 +1132,8 @@ docs = ["furo (>=2022.12.7,<2024.0.0)", "myst-parser (>=0.17.2,<1.1.0)", "sphinx
 [package.source]
 type = "git"
 url = "https://github.com/meltano/edk.git"
-reference = "main"
-resolved_reference = "f794a7c50d35437ea047e06462ffeaf6610d4c6f"
+reference = "v0.3.1a1"
+resolved_reference = "644ef9cb7aa947552ed0a7550ff6adfd087d85c7"
 
 [[package]]
 name = "minimal-snowplow-tracker"
@@ -1861,4 +1861,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = "<3.10,>=3.8"
-content-hash = "cb138d64a6b2d7220ebdf5b69bd95f549233cfb5deb7ea8cfd821bd645490311"
+content-hash = "4638e1d531cef00e393ab36953d8745fd8f7c19efdf34d934370ccef89c6ab3a"
